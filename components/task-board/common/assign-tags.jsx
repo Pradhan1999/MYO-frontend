@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-key */
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Check, Plus, X } from "lucide-react";

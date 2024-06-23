@@ -83,10 +83,10 @@ const CrosshairStackedBar = ({ height = 400 }) => {
         </span>
       ))}
       <VisXYContainer data={musicData} height={height}>
-        <VisStackedBar
+        {/* <VisStackedBar
           x={useCallback((d) => d.year, [])}
           y={labels.map((l) => useCallback((d) => d[l.format], []))}
-        />
+        /> */}
         <VisTooltip
           verticalShift={height}
           horizontalPlacement={Position.Center}

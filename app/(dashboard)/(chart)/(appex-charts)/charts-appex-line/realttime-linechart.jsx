@@ -45,19 +45,8 @@ const RealTimeLineChart = ({ height = 300 }) => {
       theme: mode === "dark" ? "dark" : "light",
     },
     grid: getGridConfig(
-      `hsl(${
-        theme?.cssVars[mode === "dark" ? "dark" : "light"]
-          .chartGird
-      })`
+      `hsl(${theme?.cssVars[mode === "dark" ? "dark" : "light"].chartGird})`
     ),
-    // yaxis: getXAxisConfig(`hsl(${
-        theme?.cssVars[mode === "dark" ? "dark" : "light"]
-          .chartLabel
-      })`),
-    // xaxis: getXAxisConfig(`hsl(${
-        theme?.cssVars[mode === "dark" ? "dark" : "light"]
-          .chartLabel
-      })`),
     padding: {
       top: 0,
       right: 0,

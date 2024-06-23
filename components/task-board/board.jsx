@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 "use client";
 import React, { useState, useTransition } from "react";
 import { toast } from "react-hot-toast";

@@ -14,9 +14,9 @@ const SidebarLogo = ({ hovered }) => {
         <div className="flex flex-1 items-center  space-x-3  ">
           {/* <SiteLogo className="w-full object-contain text-primary" /> */}
           {!collapsed || hovered ? (
-            <Image src={logo} />
+            <Image src={logo} alt="img" />
           ) : (
-            <Image src={favicon} />
+            <Image src={favicon} alt="img" />
           )}
         </div>
         {sidebarType === "classic" && (!collapsed || hovered) && (

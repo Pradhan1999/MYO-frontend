@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 import React, { useMemo, useState } from "react";
 import { Watermark } from "@/components/ui/watermark";

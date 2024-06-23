@@ -84,11 +84,11 @@ export const menusConfig = {
           icon: Monitor,
           href: "/kanban",
         },
-        {
-          title: "task",
-          icon: ListFill,
-          href: "/task",
-        },
+        // {
+        //   title: "task",
+        //   icon: ListFill,
+        //   href: "/task",
+        // },
         {
           title: "calendar",
           icon: Calendar,
@@ -936,11 +936,11 @@ export const menusConfig = {
             icon: Monitor,
             href: "/kanban",
           },
-          {
-            title: "task",
-            icon: ListFill,
-            href: "/task",
-          },
+          // {
+          //   title: "task",
+          //   icon: ListFill,
+          //   href: "/task",
+          // },
           {
             title: "calendar",
             icon: Calendar,
@@ -1840,11 +1840,11 @@ export const menusConfig = {
       //   icon: Monitor,
       //   href: "/kanban",
       // },
-      {
-        title: "task",
-        icon: ListFill,
-        href: "/task",
-      },
+      // {
+      //   title: "task",
+      //   icon: ListFill,
+      //   href: "/task",
+      // },
       // {
       //   isHeader: true,
       //   title: "menu",

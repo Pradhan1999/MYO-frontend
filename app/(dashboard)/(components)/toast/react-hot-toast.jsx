@@ -1,7 +1,8 @@
+/* eslint-disable @next/next/no-img-element */
 import React from "react";
 import { Button } from "@/components/ui/button";
 import toast from "react-hot-toast";
-import { toast } from "@/components/ui/use-toast";
+// import { toast } from "@/components/ui/use-toast";
 
 const ReactHotToast = () => {
   const defaultToast = () => toast("Here is your toast.");
@@ -70,7 +71,7 @@ const ReactHotToast = () => {
       <div
         className={`${
           t.visible ? "animate-enter" : "animate-leave"
-          } max-w-md w-full bg-background shadow-lg rounded-lg pointer-events-auto flex ring-1 ring-black ring-opacity-5`}
+        } max-w-md w-full bg-background shadow-lg rounded-lg pointer-events-auto flex ring-1 ring-black ring-opacity-5`}
       >
         <div className="flex-1 w-0 p-4">
           <div className="flex items-start">

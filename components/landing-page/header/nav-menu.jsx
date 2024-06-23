@@ -72,8 +72,8 @@ export default function NavMenu() {
             ) : (
               <NavigationMenu.Item key={`item-${index}`}>
                 <NavigationMenu.Link href={item.href}>
-                    <div className=" flex items-center px-2 py-4 cursor-pointer group  data-[state=open]:text-primary">
-                      <span className="text-base font-medium text-default-600 hover:text-primary">
+                  <div className=" flex items-center px-2 py-4 cursor-pointer group  data-[state=open]:text-primary">
+                    <span className="text-base font-medium text-default-600 hover:text-primary">
                       {item.title}
                     </span>
                   </div>
@@ -98,6 +98,7 @@ export default function NavMenu() {
   );
 }
 
+// eslint-disable-next-line react/display-name
 const ListItem = React.forwardRef(
   ({ className, children, title, childItem, ...props }, forwardedRef) => (
     <NavigationMenu.Link asChild>

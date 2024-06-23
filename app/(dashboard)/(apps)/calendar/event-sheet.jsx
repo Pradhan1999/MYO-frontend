@@ -109,7 +109,7 @@ const EventSheet = ({ open, onClose, categories, event, selectedDate }) => {
       }
     }
     setValue("title", event?.event?.title || "");
-  }, [event, selectedDate, open]);
+  }, [event, selectedDate, open, setValue, categories]);
 
   const onDeleteEventAction = async () => {
     try {

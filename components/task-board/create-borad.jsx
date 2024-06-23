@@ -67,7 +67,7 @@ const CreateBoard = ({ open, onClose, board, boardId }) => {
   React.useEffect(() => {
     setValue("name", board?.name || "");
     setValue("status", board?.status || "defaultStatus");
-  }, [open]);
+  }, [board?.name, board?.status, open, setValue]);
   return (
     <Dialog open={open} onOpenChange={onClose}>
       <DialogContent hiddenCloseIcon>

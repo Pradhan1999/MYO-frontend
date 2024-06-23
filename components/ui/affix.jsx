@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 // import React, { useRef, useState, useEffect } from "react";
 // import PropTypes from "prop-types";
 
@@ -67,7 +68,7 @@ const Affix = ({ children, offsetTop, target }) => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [offsetTop]);
+  }, [handleScroll, offsetTop]);
 
   const affixStyles = {
     position: isFixed ? "fixed" : "static",

@@ -112,7 +112,7 @@ const ContactInfo = ({ handleSetIsOpenSearch, handleShowInfo, contact }) => {
                       onClick={() => handleDrawer("media")}
                     >
                       <span className="w-5 h-5 rounded-full bg-default-200 group-hover:bg-default-300 flex justify-center items-center">
-                        <Image className="w-3.5 h-3.5 text-default-400" />
+                        <Image className="w-3.5 h-3.5 text-default-400" alt="img" />
                       </span>
                       <span className="text-xs text-default-600">Media</span>
                     </Button>

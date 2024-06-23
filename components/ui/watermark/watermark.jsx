@@ -109,7 +109,7 @@ const Watermark = ({
         .replace(/"/g, "%22");
       setBackgroundImage(`url("data:image/svg+xml,${convertedSvg}")`);
     }
-  }, [show, text, textColor, textSize, opacity, gutter, rotate, image]);
+  }, [show, text, textColor, textSize, opacity, gutter, rotate, image, fontFamily, multiline, lineHeight]);
 
   const watermarkStyle = {
     pointerEvents: "none",

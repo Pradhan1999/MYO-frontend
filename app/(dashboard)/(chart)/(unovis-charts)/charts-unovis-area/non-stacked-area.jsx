@@ -37,10 +37,10 @@ const NonStackedArea = ({ height = 400 }) => {
   };
 
   const x = useCallback((_, i) => i, []);
-  const accessors = (id) => ({
-    y: useCallback((d) => d.cases[id], []),
-    color: countries[id].color,
-  });
+  // const accessors = (id) => ({
+  //   y: useCallback((d) => d.cases[id], []),
+  //   color: countries[id].color,
+  // });
 
   const xTicks = useCallback((i) => [data[i].month, data[i].year].join(""), []);
   const yTicks = Intl.NumberFormat(navigator.language, {

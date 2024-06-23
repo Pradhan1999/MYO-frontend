@@ -1,3 +1,4 @@
+/* eslint-disable react/display-name */
 import React from "react";
 import * as NavigationMenu from "@radix-ui/react-navigation-menu";
 import { menusConfig } from "@/config/menus";
