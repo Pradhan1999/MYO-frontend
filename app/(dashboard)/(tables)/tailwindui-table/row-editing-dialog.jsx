@@ -45,93 +45,92 @@ import {
 } from "@/components/ui/alert-dialog";
 const RowEditingDialog = () => {
   return (
-
-        <Table>
-          <TableHeader>
-            <TableRow>
-              <TableHead className=" font-semibold">User</TableHead>
-              <TableHead> Title</TableHead>
-              <TableHead>Email</TableHead>
-              <TableHead>Role</TableHead>
-              <TableHead>Status</TableHead>
+    <Table>
+      <TableHeader>
+        <TableRow>
+          <TableHead className=" font-semibold">User</TableHead>
+          <TableHead> Title</TableHead>
+          <TableHead>Email</TableHead>
+          <TableHead>Role</TableHead>
+          <TableHead>Status</TableHead>
           <TableHead className=" text-end">Action</TableHead>
-            </TableRow>
-          </TableHeader>
-          <TableBody>
-            {users.map((item) => (
-              <TableRow key={item.email}>
-                <TableCell className="  font-medium  text-card-foreground/80">
-                  <div className="flex space-x-3  rtl:space-x-reverse items-center">
-                    <Avatar className=" rounded-full">
-                      <AvatarImage src={item.avatar} />
-                      <AvatarFallback>AB</AvatarFallback>
-                    </Avatar>
-                    <span className=" text-sm   text-card-foreground">
-                      {item.name}
-                    </span>
-                  </div>
-                </TableCell>
+        </TableRow>
+      </TableHeader>
+      <TableBody>
+        {users.map((item) => (
+          <TableRow key={item.email}>
+            <TableCell className="  font-medium  text-card-foreground/80">
+              <div className="flex space-x-3  rtl:space-x-reverse items-center">
+                <Avatar className=" rounded-full">
+                  <AvatarImage src={item.avatar} />
+                  <AvatarFallback>AB</AvatarFallback>
+                </Avatar>
+                <span className=" text-sm   text-card-foreground">
+                  {item.name}
+                </span>
+              </div>
+            </TableCell>
 
-                <TableCell>{item.title}</TableCell>
-                <TableCell>{item.email}</TableCell>
-                <TableCell>
-                  <Badge
-                    variant="soft"
-                    color={
-                      (item.role === "admin" && "default") ||
-                      (item.role === "member" && "success") ||
-                      (item.role === "owner" && "info") ||
-                      (item.role === "editor" && "warning") 
-                    }
-                    className=" capitalize"
-                  >
-                    {item.role}
-                  </Badge>
-                </TableCell>
-                <TableCell>
-                  <Switch id={item.email} />
-                </TableCell>
-                <TableCell className="flex justify-end">
-                  <div className="flex space-x-3 rtl:space-x-reverse">
-                    <EditingDialog />
+            <TableCell>{item.title}</TableCell>
+            <TableCell>{item.email}</TableCell>
+            <TableCell>
+              <Badge
+                variant="soft"
+                color={
+                  (item.role === "admin" && "default") ||
+                  (item.role === "member" && "success") ||
+                  (item.role === "owner" && "info") ||
+                  (item.role === "editor" && "warning")
+                }
+                className=" capitalize"
+              >
+                {item.role}
+              </Badge>
+            </TableCell>
+            <TableCell>
+              <Switch id={item.email} />
+            </TableCell>
+            <TableCell className="flex justify-end">
+              <div className="flex space-x-3 rtl:space-x-reverse">
+                <EditingDialog />
 
-                    <AlertDialog>
-                      <AlertDialogTrigger asChild>
-                        <Button
-                          size="icon"
-                          variant="outline"
-                          className=" h-7 w-7"
-                          color="secondary"
-                        >
-                          <Icon icon="heroicons:trash" className=" h-4 w-4  " />
-                        </Button>
-                      </AlertDialogTrigger>
-                      <AlertDialogContent>
-                        <AlertDialogHeader>
-                          <AlertDialogTitle>
-                            Are you absolutely sure?
-                          </AlertDialogTitle>
-                          <AlertDialogDescription>
-                            This action cannot be undone. This will permanently
-                            delete your account and remove your data from our
-                            servers.
-                          </AlertDialogDescription>
-                        </AlertDialogHeader>
-                        <AlertDialogFooter>
-                          <AlertDialogCancel className=" bg-secondary">
-                            Cancel
-                          </AlertDialogCancel>
-                          <AlertDialogAction className="bg-destructive hover:bg-destructive/80">
-                            Ok
-                          </AlertDialogAction>
-                        </AlertDialogFooter>
-                      </AlertDialogContent>
-                    </AlertDialog>
-                  </div>
-                </TableCell>
-              </TableRow>
-            ))}
-          </TableBody>
+                <AlertDialog>
+                  <AlertDialogTrigger asChild>
+                    <Button
+                      size="icon"
+                      variant="outline"
+                      className=" h-7 w-7"
+                      color="secondary"
+                    >
+                      <Icon icon="heroicons:trash" className=" h-4 w-4  " />
+                    </Button>
+                  </AlertDialogTrigger>
+                  <AlertDialogContent>
+                    <AlertDialogHeader>
+                      <AlertDialogTitle>
+                        Are you absolutely sure?
+                      </AlertDialogTitle>
+                      <AlertDialogDescription>
+                        This action cannot be undone. This will permanently
+                        delete your account and remove your data from our
+                        servers.
+                      </AlertDialogDescription>
+                    </AlertDialogHeader>
+                    <AlertDialogFooter>
+                      <AlertDialogCancel className=" bg-secondary">
+                        Cancel
+                      </AlertDialogCancel>
+                      <AlertDialogAction className="bg-destructive hover:bg-destructive/80">
+                        Ok
+                      </AlertDialogAction>
+                    </AlertDialogFooter>
+                  </AlertDialogContent>
+                </AlertDialog>
+              </div>
+            </TableCell>
+          </TableRow>
+        ))}
+      </TableBody>
     </Table>
   );
 };

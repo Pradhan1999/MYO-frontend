@@ -56,14 +56,14 @@ const ThemeCustomize = ({
             <FooterStyle />
           </div>
         </ScrollArea>
-        <SheetFooter className="py-4 gap-3 lg:flex justify-between hidden  ">
+        {/* <SheetFooter className="py-4 gap-3 lg:flex justify-between hidden  ">
           <Button asChild className="w-full">
             <Link href="/dashboard">Buy Now</Link>
           </Button>
           <Button asChild className="w-full">
             <Link href="/dashboard">Our Portfolio</Link>
           </Button>
-        </SheetFooter>
+        </SheetFooter> */}
       </SheetContent>
     </Sheet>
   );

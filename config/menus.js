@@ -1821,6 +1821,11 @@ export const menusConfig = {
         icon: ClipBoard,
       },
       {
+        title: "Organization",
+        href: "/organization",
+        icon: ClipBoard,
+      },
+      {
         title: "Projects",
         href: "/projects",
         icon: ClipBoard,
@@ -1830,11 +1835,11 @@ export const menusConfig = {
         icon: Messages,
         href: "/chat",
       },
-      {
-        title: "kanban",
-        icon: Monitor,
-        href: "/kanban",
-      },
+      // {
+      //   title: "kanban",
+      //   icon: Monitor,
+      //   href: "/kanban",
+      // },
       {
         title: "task",
         icon: ListFill,

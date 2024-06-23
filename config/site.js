@@ -1,5 +1,5 @@
 export const siteConfig = {
-  name: "RedRoverConnect",
+  name: "MYO",
   description: null,
   theme: "violet",
   layout: "vertical",

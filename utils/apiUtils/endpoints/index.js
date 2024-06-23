@@ -1,6 +1,6 @@
 import user from "./user";
 import auth from "./auth";
-import organization from "./organization";
+import organization from "./themeOrganization";
 import projects from "./projects";
 // import category from './category';
 // import product from './product';

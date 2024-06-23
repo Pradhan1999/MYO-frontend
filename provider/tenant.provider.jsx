@@ -7,7 +7,7 @@ import { createContext, useEffect, useState } from "react";
 // import { useRouter } from 'next/router';
 
 // ** Config
-import { getOrganizationDetails } from "@/services/organization";
+import { getOrganizationDetails } from "@/services/themeOrganization";
 
 // ** Defaults
 const defaultProvider = {
@@ -27,10 +27,10 @@ const TenantProvider = ({ children }) => {
   useEffect(() => {
     const initGetTenant = async () => {
       setLoading(true);
-      getOrganizationDetails().then(async (response) => {
-        setLoading(false);
-        setTenant({ ...response });
-      });
+      // getOrganizationDetails().then(async (response) => {
+      //   setLoading(false);
+      //   setTenant({ ...response });
+      // });
     };
     initGetTenant();
   }, []);
