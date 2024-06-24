@@ -24,9 +24,9 @@ import { Icon } from "@iconify/react";
 import { useEffect, useState } from "react";
 import { getAllOrg } from "@/services/organization";
 import toast from "react-hot-toast";
-import AddUpdateOrg from "../AddUpdateOrg";
+import AddUpdateSession from "../AddUpdateSession";
 
-const OrganizationTable = () => {
+const SessionTable = () => {
   const [orgDetails, setOrgDetails] = useState(null);
   const [singleOrgDetails, setSingleOrgDetails] = useState({});
   const [isOpen, setIsOpen] = useState(false);
@@ -112,16 +112,12 @@ const OrganizationTable = () => {
     },
   ];
 
-  const fetchAllOrg = () => {
+  useEffect(() => {
     getAllOrg({ query: { start: 0, limit: 10 } })
       .then((res) => {
         setOrgDetails(res);
       })
       .catch((error) => toast.error(error));
-  };
-
-  useEffect(() => {
-    fetchAllOrg();
   }, []);
 
   const table = useReactTable({
@@ -191,16 +187,15 @@ const OrganizationTable = () => {
         <Pagination table={table} />
       </div>
 
-      {/* ADD/UPDATE ORGANIZATION MODAL */}
-      <AddUpdateOrg
+      {/* ADD/UPDATE SESSION MODAL */}
+      <AddUpdateSession
         open={isOpen}
         handleChange={setIsOpen}
         data={singleOrgDetails}
         clearData={() => setSingleOrgDetails(null)}
-        refetchOrg={() => fetchAllOrg()}
       />
     </>
   );
 };
 
-export default OrganizationTable;
+export default SessionTable;

@@ -36,7 +36,7 @@ const schema = z.object({
   logo: z.string().optional(),
 });
 
-const AddUpdateOrg = ({ open, handleChange, data, clearData, refetchOrg }) => {
+const AddUpdateSession = ({ open, handleChange, data, clearData }) => {
   const {
     register,
     setValue,
@@ -84,7 +84,6 @@ const AddUpdateOrg = ({ open, handleChange, data, clearData, refetchOrg }) => {
       .then((res) => {
         toast.success("Updated successfully");
         handleChange(false);
-        refetchOrg();
         clearData();
       })
       .catch((err) => toast.error(err?.message ?? "Something went wrong"));
@@ -205,4 +204,4 @@ const AddUpdateOrg = ({ open, handleChange, data, clearData, refetchOrg }) => {
   );
 };
 
-export default AddUpdateOrg;
+export default AddUpdateSession;

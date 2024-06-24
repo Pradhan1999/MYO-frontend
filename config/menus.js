@@ -1826,10 +1826,15 @@ export const menusConfig = {
         icon: ClipBoard,
       },
       {
-        title: "Projects",
-        href: "/projects",
+        title: "Session",
+        href: "/session",
         icon: ClipBoard,
       },
+      // {
+      //   title: "Projects",
+      //   href: "/projects",
+      //   icon: ClipBoard,
+      // },
       {
         title: "chat",
         icon: Messages,
